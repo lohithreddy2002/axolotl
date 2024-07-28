@@ -325,7 +325,7 @@ def replace_create_optimizer(
     medusa_lr_multiplier,
 ):
     # Copy from transformers.Trainer.create_optimizer
-    from transformers.trainer import is_sagemaker_mp_enabled, Trainer, ShardedDDPOption
+    from transformers.trainer import is_sagemaker_mp_enabled, Trainer
     def create_optimizer(self):
         """
         Setup the optimizer.
