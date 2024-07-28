@@ -253,8 +253,6 @@ def load_model(
             model = LlamaForCausalLM.from_pretrained(
                 base_model,
                 config=config,
-                load_in_8bit=cfg.load_in_8bit and cfg.adapter is not None,
-                load_in_4bit=cfg.load_in_4bit and cfg.adapter is not None,
                 **model_kwargs,
             )
 
