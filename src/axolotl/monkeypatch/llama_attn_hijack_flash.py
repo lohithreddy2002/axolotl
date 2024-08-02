@@ -541,6 +541,7 @@ def llama_model_forward(
     output_attentions: Optional[bool] = None,
     output_hidden_states: Optional[bool] = None,
     return_dict: Optional[bool] = None,
+    cache_position:Optional[bool]= None
 ) -> Union[Tuple, BaseModelOutputWithPast]:
     output_attentions = (
         output_attentions
@@ -674,6 +675,7 @@ def llama_model_forward(
                 padding_mask=padding_mask,
                 cu_seqlens=cu_seqlens,
                 max_seqlen=max_seqlen,
+                cache_position = None
             )
 
         hidden_states = layer_outputs[0]
