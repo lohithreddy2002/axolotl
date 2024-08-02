@@ -675,7 +675,7 @@ def llama_model_forward(
                 padding_mask=padding_mask,
                 cu_seqlens=cu_seqlens,
                 max_seqlen=max_seqlen,
-                cache_position = None
+                cache_position = cache_position
             )
 
         hidden_states = layer_outputs[0]
